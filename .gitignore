@@ -16,3 +16,7 @@
 
 # Logs
 *.log
+
+# Environment files (local only)
+.env
+.env.*
