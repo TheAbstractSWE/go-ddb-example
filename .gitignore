@@ -1,0 +1,18 @@
+# Binaries
+/go-ddb-example
+*.exe
+*.out
+
+# Go build
+/bin/
+/vendor/
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Docker
+.dockerignore
+
+# Logs
+*.log

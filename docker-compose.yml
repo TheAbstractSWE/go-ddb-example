@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    ports:
+      - "8000:8000"
+    command: "-jar DynamoDBLocal.jar -inMemory -sharedDb"
+
+  api:
+    build: .
+    environment:
+      - DYNAMODB_ENDPOINT=http://dynamodb:8000
+    ports:
+      - "8080:8080"
+    depends_on:
+      - dynamodb
